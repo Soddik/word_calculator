@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count words</title>
+</head>
+<body>
+<h1>Искать слова длиннее чем:</h1>
+<form method="post" data-th-action="@{/directory/find/words}">
+    <label for="dir">Directory path:</label>
+    <input type="text" id="dir" name="dirPath">
+    <label for="minLength">Min.word length:</label>
+    <input type="number" id="minLength" name="minLength" value="4">
+    <label for="topN">Top N:</label>
+    <input type="number" id="topN" name="topN" value="10">
+    <button type="submit">Искать</button>
+</form>
+</body>
+</html>

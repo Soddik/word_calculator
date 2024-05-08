@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Words found</title>
+</head>
+<body>
+<h1>Words found</h1>
+<tr data-th-each="word :${result.words()}">
+    <td data-th-text="${word.word}"/>
+    <td data-th-text="${word.count}"/>
+</tr>
+<form method="get" data-th-action="@{/directory/find/words}">
+    <button type="submit">Вернуться</button>
+</form>
+</body>
+</html>

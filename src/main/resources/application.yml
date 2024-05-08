@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: word_calculator
+server:
+  port: 8084

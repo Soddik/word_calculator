@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<h1>ERROR!</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Параметр</th>
+        <th>Ошибка</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-th-each="error : ${errors}">
+        <td data-th-text="${error.paramName()}"></td>
+        <td data-th-text="${error.errorMessage()}"></td>
+    </tr>
+    </tbody>
+</table>
+<form method="get" data-th-action="@{/directory/find/words}">
+    <button type="submit">Вернуться</button>
+</form>
+</body>
+</html>
